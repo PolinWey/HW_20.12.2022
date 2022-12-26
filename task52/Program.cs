@@ -14,30 +14,30 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
         for (int j = 0; j < n; j++)
         {
             result[i, j] = new Random().Next(minValue, maxValue);
-            System.Console.Write(result[i, j] + " ");
+            Console.Write(result[i, j] + " ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
     return result;
 }
 
 double[] SumArray(int[,] array)
 {
-    double[] newArray = new double[array.GetLength(1)];
+    double[] NewArray = new double[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(1); i++)
     {
         for (int j = 0; j < array.GetLength(0); j++)
         {
-            newArray[i]+=array[j,i];
+            NewArray[i]+=array[j,i];
         }
     }
-    System.Console.WriteLine();
-    for (int i = 0; i < newArray.Length; i++)
+    Console.WriteLine();
+    for (int i = 0; i < NewArray.Length; i++)
     {
-        newArray[i] = newArray[i] / array.GetLength(0);
-        System.Console.Write(newArray[i] + " ");
+        NewArray[i] = NewArray[i] / array.GetLength(0);
+        Console.Write(NewArray[i] + " ");
     }
-    return newArray;
+    return NewArray;
 }
 Console.Clear();
 int[,] array = GetArray(4, 6, 4, 16);
