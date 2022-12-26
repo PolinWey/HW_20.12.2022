@@ -14,9 +14,9 @@ int[,] GetAndPrintArray(int m, int n, int minValue, int maxValue)
         for (int j = 0; j < n; j++)
         {
             result[i, j] = new Random().Next(minValue, maxValue);
-            System.Console.Write(result[i,j]+" ");
+            Console.Write(result[i,j]+" ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
     return result;
 }
@@ -25,7 +25,7 @@ void ElementArray(int[,] array, int indexRows, int indexColumns)
 {
     if (indexRows >= array.GetLength(0) && indexColumns >= array.GetLength(1))
     {
-        System.Console.WriteLine("Такого элемента нет");
+        Console.WriteLine("Такого элемента нет");
         
     }
     else
@@ -36,24 +36,24 @@ void ElementArray(int[,] array, int indexRows, int indexColumns)
             {
                 if (i == indexRows && j == indexColumns)
                 {
-                    System.Console.WriteLine(array[indexRows, indexColumns]);
+                    Console.WriteLine(array[indexRows, indexColumns]);
                     break;
                 }
             }
         }
     }
 }
-System.Console.Write("Введите количество строк: ");
+Console.Write("Введите количество строк: ");
 int rows = int.Parse(Console.ReadLine()!);
-System.Console.Write("Введите количество столбцов: ");
+Console.Write("Введите количество столбцов: ");
 int columns = int.Parse(Console.ReadLine()!);
 
-System.Console.Write("Введите индекс строки: ");
+Console.Write("Введите индекс строки: ");
 int indexRows = int.Parse(Console.ReadLine()!);
-System.Console.Write("Введите индекс столбца: ");
+Console.Write("Введите индекс столбца: ");
 int indexColumns = int.Parse(Console.ReadLine()!);
 
 int[,] array = GetAndPrintArray(rows, columns, 5, 30);
-System.Console.WriteLine();
+Console.WriteLine();
 ElementArray(array, indexRows, indexColumns);
 
